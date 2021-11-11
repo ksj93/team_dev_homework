@@ -21,6 +21,7 @@ class TeamsController < ApplicationController
       redirect_to team_path(@team)
     end
   end
+  
 
   def create
     @team = Team.new(team_params)
