@@ -12,5 +12,8 @@ class AssignMailer < ApplicationMailer
     @team_info = Team.where(owner_id:@assign.id)
     mail to: @assign.email, subject: "あなたはチームのリーダーになりました"
   end
-
+  def del_agenda_mail(user)
+    @user = user
+    mail to: @user.email, subject: "アジェンダが削除されました"
+  end
 end
